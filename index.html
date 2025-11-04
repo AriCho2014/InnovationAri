@@ -128,6 +128,8 @@
 
   <!-- Navigation -->
   <nav>
+    <button id="new">New Vistas official website</button>
+    <button id="home">My other Website</button>
     <button id="projects" class="active">Innovation Project</button>
     <button id="info">Want More Info?</button>
     <button id="lightMode" onclick="ToggleLightMode()">Switch to Light Mode</button>
@@ -183,6 +185,8 @@
   <script>
     // Navigation Links
     document.getElementById("info").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri/info";
+    document.getElementById("home").onclick = () => location.href = "https://aricho2014.github.io/NewVistasWebsite/";
+    document.getElementById("new").onclick = () => window.open("https://www.newvistasaz.com/", "_blank");
 
     // Light Mode Toggle
     function ToggleLightMode() {
