@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Innovation Club Info | New Vistas</title>
+  <title>Innovation for Engineering Club | New Vistas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Global transitions and base styling */
+    /* Smooth transitions for all elements */
     body, h1, h2, h3, p, a, button, header {
       transition: background-color 0.5s, color 0.5s;
       font-family: Arial, Helvetica, sans-serif;
@@ -15,9 +15,8 @@
       background-color: black;
       color: white;
       margin: 0;
-      padding: 0;
+      padding-top: 180px; /* Adjusted to match header height */
       line-height: 1.6;
-      text-align: center;
     }
 
     .lightmode {
@@ -27,14 +26,24 @@
 
     /* ---------- Header ---------- */
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: brown;
       color: white;
       text-align: center;
       padding: 20px 15px;
       font-size: 1.3em;
       border-radius: 0 0 10px 10px;
-      position: fixed;
-      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .names {
+      font-size: 0.9em;
+      color: #f0d9d9;
+      margin-top: 10px;
     }
 
     .lightmode header {
@@ -48,7 +57,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 15px 0;
+      margin-top: 15px;
     }
 
     button {
@@ -65,7 +74,6 @@
     button:hover {
       color: white;
       border-color: white;
-      transform: scale(1.05);
     }
 
     button.active {
@@ -88,22 +96,19 @@
     .title {
       text-align: center;
       font-size: 2em;
-      margin-top: 3.5em;
-      font-weight: bold;
+      margin-top: 2em;
     }
-    
 
     .subtitle {
       font-weight: bold;
       font-size: 1.2em;
       margin-top: 1.5em;
-      text-align: center;
     }
 
     p, div {
       max-width: 900px;
       margin: 0 auto;
-      padding: 10px 15px;
+      padding: 0 15px;
     }
 
     a {
@@ -123,70 +128,72 @@
     .lightmode a:hover {
       color: blue;
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: gray;
-    }
   </style>
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <button id="new">New Vistas official website</button>
-    <button id="home">My other Website</button>
-    <button id="projects">Innovation Project</button>
-    <button id="info" class="active">Info</button>
-    <button id="lightMode" onclick="ToggleLightMode()">Switch to Light Mode</button>
-  </nav>
-
-  <!-- Header -->
+  <!-- Header (Now includes Navigation) -->
   <header>
-    About the Innovation Club
+    What type of foliage is most difficult for archaeologists to excavate and how do they get past those foliages?
+    <div class="names">By Aarize, Aarush, Ian, Arjun, Purav, and Arinjay</div>
+
+    <nav>
+      <button id="new">New Vistas official website</button>
+      <button id="home">My other Website</button>
+      <button id="projects" class="active">Innovation Project</button>
+      <button id="info">Want More Info?</button>
+      <button id="lightMode" onclick="ToggleLightMode()">Switch to Light Mode</button>
+    </nav>
   </header>
 
+  <!-- Title -->
+  <h1 class="title">For the New Vistas Center For Education Engineering Club: Innovation</h1>
+
   <!-- Main Content -->
-  <h1 class="title">New Vistas Center for Education Engineering Club: Innovation</h1>
-
+  <div class="subtitle">Invasive plants</div>
   <p>
-    The Innovation Club at <strong>New Vistas Center for Education</strong> encourages students to apply creativity and engineering thinking to solve real-world problems.
+    Invasive species can be particularly problematic due to their aggressive and pervasive root structures.<br><br>
+    ● <strong>Kudzu (Pueraria montana):</strong> Known as "the vine that ate the South," it spreads rapidly and obscures features.<br><br>
+    ● <strong>Horsetail (Equisetum arvense):</strong> Its deep rhizomes intrude and disrupt layers.<br><br>
+    ● <strong>Garlic Mustard (Alliaria petiolata):</strong> Alters soil composition and dominates forest floors.
   </p>
 
-  <div class="subtitle">What We Do</div>
+  <div class="subtitle">Mature Trees and Root Systems</div>
   <p>
-    Our club members brainstorm, design, and build projects that connect classroom concepts to hands-on experiences.
-    Students explore topics like robotics, architecture, environmental design, and technology-driven solutions.
+    Deep roots from large trees disrupt archaeological layers, mix soil, and can destroy fragile artifacts. 
+    Roots change soil chemistry, affect drainage, and can even displace entire sections when uprooted.
   </p>
 
-  <div class="subtitle">Our Goals</div>
+  <div class="subtitle">Challenges of Excavating Roots</div>
   <p>
-    • Encourage creative problem solving and critical thinking.<br>
-    • Develop engineering skills through collaboration and experimentation.<br>
-    • Foster teamwork and leadership among students of all grades.<br>
-    • Present our findings and creations to the school community.
+    Roots create tight webs that make digging difficult, cause "<strong>floralturbation</strong>" (disruption of soil layers),
+    and risk damaging fragile artifacts. Features may also be obscured by root systems.
   </p>
 
-  <div class="subtitle">Want to Join?</div>
+  <div class="subtitle">Modern Solutions</div>
   <p>
-    Engineering Club meets after school twice every week to plan projects and conduct experiments.<br>
-    <a target="_blank" href="https://www.newvistasaz.com/">Visit the New Vistas Center for Education website</a> to learn more about their programs and clubs.
+    Archaeologists now use <a target="_blank" href="https://en.wikipedia.org/wiki/Lidar">LiDAR</a> (Light Detection and Ranging) to see beneath dense foliage. <br><br>
+    ● LiDAR scans from planes or drones create detailed 3D maps that can reveal hidden features under trees.<br><br>
+    ● This has led to discoveries of ancient cities in jungles without needing to cut vegetation.
   </p>
 
-  <footer>
-    © 2025 New Vistas Engineering Club | Website designed by Aarize Choudhury
-  </footer>
+  <div class="subtitle">Non-Invasive Methods</div>
+  <p>
+    ● <a target="_blank" href="https://en.wikipedia.org/wiki/Geophysical_survey">Geophysical surveys</a> such as 
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Ground-penetrating_radar">ground-penetrating radar</a> and 
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Magnetometer">magnetometry</a> reveal subsurface structures.<br><br>
+    ● <a target="_blank" href="https://en.wikipedia.org/wiki/Survey_(archaeology)">Surface surveys</a> and 
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Shovel_test_pit">shovel testing</a> help locate artifacts under grassy areas.
+  </p>
 
+  <!-- Script -->
   <script>
-    // Navigation links
-    document.getElementById("new").onclick = () => window.open("https://www.newvistasaz.com/", "_blank");
+    // Navigation Links
+    document.getElementById("info").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri/info";
     document.getElementById("home").onclick = () => window.open("https://aricho2014.github.io/NewVistasWebsite", "_blank");
-    document.getElementById("projects").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri";
-
-    // Light/Dark mode toggle
+    document.getElementById("new").onclick = () => window.open("https://www.newvistasaz.com/", "_blank");
+    
+    // Light Mode Toggle
     function ToggleLightMode() {
       const body = document.body;
       const button = document.getElementById("lightMode");
@@ -199,4 +206,3 @@
 
 </body>
 </html>
-
