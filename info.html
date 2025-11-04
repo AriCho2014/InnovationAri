@@ -1,18 +1,197 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>More Info!</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="Style/Header.css">
-        <link rel="stylesheet" href="Style/Paragraph.css">
-    </head>
-    <body>
-        <header>
-            What type of foliage is most difficult for archaeologists to excavate and how do they get past those foliages?<div class="names">By Aarize, Aarush, Ian, Arjun, Purav, and Arinjay</div>
-        </header><p style="margin-bottom: 14em; border: none"></p><h1 class="title" style="font-size: xxx-large">For the New Vistas Center For Education Engineering Club: Innovation</h1>
-        <a href="https://aricho2014.github.io/InnovationAri/" class="link">Back to main</a>
-        <h1 class="title">Thanks to Mrs. Rabo for hosting the engineering club and my team members for boosting my confidence! -Aarize, creator of this website</h1>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Innovation Club Info | New Vistas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Global transitions and base styling */
+    body, h1, h2, h3, p, a, button, header {
+      transition: background-color 0.5s, color 0.5s;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-    </body>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .lightmode {
+      background-color: white;
+      color: black;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      background-color: brown;
+      color: white;
+      text-align: center;
+      padding: 20px 15px;
+      font-size: 1.3em;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .lightmode header {
+      background-color: #a0522d;
+      color: white;
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 1px solid gray;
+      color: gray;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      color: white;
+      border-color: white;
+      transform: scale(1.05);
+    }
+
+    button.active {
+      color: white;
+      border-color: white;
+      font-weight: bold;
+    }
+
+    .lightmode button {
+      color: black;
+      border-color: black;
+    }
+
+    .lightmode button:hover {
+      color: white;
+      background-color: black;
+    }
+
+    /* ---------- Content ---------- */
+    .title {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 1.5em;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 1.5em;
+      text-align: center;
+    }
+
+    p, div {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 15px;
+    }
+
+    a {
+      color: lightblue;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: deepskyblue;
+    }
+
+    .lightmode a {
+      color: darkblue;
+    }
+
+    .lightmode a:hover {
+      color: blue;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <button id="home">Home</button>
+    <button id="projects">Innovation Project</button>
+    <button id="info" class="active">Info</button>
+    <button id="lightMode" onclick="ToggleLightMode()">Switch to Light Mode</button>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    About the Innovation Club
+  </header>
+
+  <!-- Main Content -->
+  <h1 class="title">New Vistas Center for Education Engineering Club: Innovation</h1>
+
+  <p>
+    The Innovation Club at <strong>New Vistas Center for Education</strong> encourages students to apply creativity and engineering thinking to solve real-world problems.
+  </p>
+
+  <div class="subtitle">What We Do</div>
+  <p>
+    Our club members brainstorm, design, and build projects that connect classroom concepts to hands-on experiences.
+    Students explore topics like robotics, architecture, environmental design, and technology-driven solutions.
+  </p>
+
+  <div class="subtitle">Our Goals</div>
+  <p>
+    • Encourage creative problem solving and critical thinking.<br>
+    • Develop engineering skills through collaboration and experimentation.<br>
+    • Foster teamwork and leadership among students of all grades.<br>
+    • Present our findings and creations to the school community.
+  </p>
+
+  <div class="subtitle">Want to Join?</div>
+  <p>
+    Innovation Club meets after school every week to plan projects and conduct experiments.<br>
+    <a target="_blank" href="https://www.newvistasaz.com/">Visit the New Vistas Center for Education website</a> to learn more about our programs and clubs.
+  </p>
+
+  <footer>
+    © 2025 New Vistas Innovation Club | Designed by Aarize Cho
+  </footer>
+
+  <script>
+    // Navigation links
+    document.getElementById("home").onclick = () => location.href = "https://aricho2014.github.io/NewVistasWebsite/home";
+    document.getElementById("projects").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri";
+    document.getElementById("info").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri/info";
+
+    // Light/Dark mode toggle
+    function ToggleLightMode() {
+      const body = document.body;
+      const button = document.getElementById("lightMode");
+      body.classList.toggle("lightmode");
+      button.textContent = body.classList.contains("lightmode")
+        ? "Switch to Dark Mode"
+        : "Switch to Light Mode";
+    }
+  </script>
+
+</body>
 </html>
 
