@@ -72,7 +72,7 @@
     .sidebar button {
       padding: 8px 12px;
       background-color: rgba(128,128,128,0.3);
-      border: 1px solid gray;
+      border: 1px inset gray;
       border-radius: 10px;
       cursor: pointer;
       color: white;
@@ -96,6 +96,14 @@
       color: black;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
     /* ---------- Boxes for content ---------- */
     .content-box {
       background-color: rgba(50,50,50,0.8);
@@ -105,11 +113,44 @@
       max-width: 900px;
       box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
       scroll-margin-top: 150px; /* for fixed header offset */
+      border: black outset 5px;
     }
 
     .lightmode .content-box {
       background-color: rgba(220,220,220,0.8);
       color: black;
+    }
+
+     button {
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 1px solid gray;
+      color: gray;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      color: white;
+      border-color: white;
+    }
+
+    button.active {
+      color: white;
+      border-color: white;
+      font-weight: bold;
+    }
+
+    .lightmode button {
+      color: black;
+      border-color: black;
+    }
+
+    .lightmode button:hover {
+      color: white;
+      background-color: black;
     }
 
     h1.title {
@@ -163,6 +204,13 @@
   </header>
 
   <!-- Floating Sidebar -->
+   <nav>
+      <button id="new">New Vistas official website</button>
+      <button id="home">My other Website</button>
+      <button id="projects" class="active">Innovation Project</button>
+      <button id="info">Want More Info?</button>
+      <button id="lightMode" onclick="ToggleLightMode()">Switch to Light Mode</button>
+    </nav>
   <div class="sidebar">
     <button onclick="scrollToBox('invasive')">Invasive Plants</button>
     <button onclick="scrollToBox('trees')">Mature Trees and Roots</button>
@@ -227,6 +275,10 @@
 
   <!-- Scripts -->
   <script>
+    document.getElementById("info").onclick = () => location.href = "https://aricho2014.github.io/InnovationAri/info";
+    document.getElementById("home").onclick = () => window.open("https://aricho2014.github.io/NewVistasWebsite", "_blank");
+    document.getElementById("new").onclick = () => window.open("https://www.newvistasaz.com/", "_blank");
+    
     // Light Mode Toggle
     function ToggleLightMode() {
       const body = document.body;
